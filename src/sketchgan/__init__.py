@@ -1,14 +1,14 @@
-import torch
-import torch.nn as nn
-
-from torch.optim import Adam
-from torch.utils.data import DataLoader, TensorDataset
-
 import os
 import sys
 
 import numpy as np
 from PIL import Image
+
+import torch
+import torch.nn as nn
+
+from torch.optim import Adam
+from torch.utils.data import DataLoader, TensorDataset
 
 EPOCHS = 20
 
