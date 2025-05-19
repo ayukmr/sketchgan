@@ -161,7 +161,7 @@ def train(label):
 
     torch.save(gen.state_dict(), f'models/{label}.pth')
 
-def eval(label):
+def inference(label):
     gen = Generator().to(device)
 
     gen.load_state_dict(torch.load(f'models/{label}.pth'))
@@ -178,7 +178,7 @@ def eval(label):
 def main():
     commands = {
         'train': train,
-        'eval':  eval
+        'eval':  inference
     }
 
     if len(sys.argv) == 3 and sys.argv[1] in commands:
