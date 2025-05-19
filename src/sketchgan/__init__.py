@@ -55,8 +55,7 @@ class Discriminator(nn.Module):
         self.c2 = nn.Conv2d(64,  128, kernel_size=4, stride=2, padding=1)
         self.c3 = nn.Conv2d(128, 256, kernel_size=3, stride=2, padding=1)
 
-        self.f = nn.Flatten()
-
+        self.f  = nn.Flatten()
         self.d1 = nn.Linear(256 * 4 * 4, 1)
 
         self.relu = nn.LeakyReLU(0.2)
